@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="ej_css_js" inherit_id="website.assets_backend" name="Website assets">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/css_js/static/src/js/salon_booking.js"></script>
+            </xpath>
+        </template>
+</odoo>

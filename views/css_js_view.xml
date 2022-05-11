@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<odoo> 
+<!-- Comentario en la Views --> 
+     <record id="view_ej_css_js_form" model="ir.ui.view"> 
+        <field name="name">ej.css_js.form</field> 
+        <field name="model">ej.css_js</field> 
+        <field name="arch" type="xml"> 
+            <form string="Listado de Css_js"> 
+                <group> 
+                    <field name="Ventas"/>
+                    <button class="oe_highlight"
+                            icon="fa-map-marker" string="Send LibreDTE"
+                            onclick="funcion()" name="send_request_libre_dte"
+                            aria-label="GPS"
+                            style="font-size: 15px;">
+
+                    </button>
+                </group> 
+            </form> 
+        </field> 
+    </record> 
+     <record id="view_tree_css_js" model="ir.ui.view"> 
+        <field name="name">ej.css_js.tree</field> 
+        <field name="model">ej.css_js</field> 
+        <field name="arch" type="xml"> 
+           <tree> 
+                    <field name="Ventas"/> 
+           </tree> 
+        </field> 
+    </record> 
+    <record model="ir.actions.act_window" id="act_ej_css_js"> 
+        <field name="name">css_js</field> 
+        <field name="res_model">ej.css_js</field> 
+        <field name="view_mode">tree,form</field> 
+        <field name="view_id"  ref="view_tree_css_js" /> 
+    </record> 
+<!--  Declaramos los menu --> 
+<menuitem id="ej_css_js_menu" name="Css_js" web_icon="stock,static/description/icon.png" sequence="10"/> 
+<menuitem id="submenu_ej_css_js_menu" name="Css_js" sequence="10" parent="ej_css_js_menu"/> 
+<menuitem id="submenu_ej_css_js_action" name="Css_js" sequence="10" parent="submenu_ej_css_js_menu" action="act_ej_css_js"/> 
+</odoo> 
