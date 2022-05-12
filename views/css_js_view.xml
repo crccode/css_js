@@ -5,20 +5,32 @@
         <field name="name">ej.css_js.form</field> 
         <field name="model">ej.css_js</field> 
         <field name="arch" type="xml"> 
-            <form string="Listado de Css_js"> 
+            <form string="Listado de Css_js">
+                <h1 class="style_chair">Hola</h1>
                 <group> 
                     <field name="Ventas"/>
                     <button class="oe_highlight"
                             icon="fa-map-marker" string="Send LibreDTE"
-                            onclick="funcion()" name="send_request_libre_dte"
+                            onclick="funcion1()" name="send_request_libre_dte"
                             aria-label="GPS"
                             style="font-size: 15px;">
 
                     </button>
+                    <div class="o_primary style_chair">
+
+                        <div>
+                            <button  type="edit" string="Settings" class="fa fa-cog button_background"/>
+                        </div>
+                        <div>
+                            <button id="submit_button" name="button" class="your_class" string="ok" />
+
+                        </div>
+                    </div>
                 </group> 
             </form> 
         </field> 
-    </record> 
+    </record>
+
      <record id="view_tree_css_js" model="ir.ui.view"> 
         <field name="name">ej.css_js.tree</field> 
         <field name="model">ej.css_js</field> 
@@ -33,7 +45,22 @@
         <field name="res_model">ej.css_js</field> 
         <field name="view_mode">tree,form</field> 
         <field name="view_id"  ref="view_tree_css_js" /> 
-    </record> 
+    </record>
+
+<!--    <template id="assets_backend" name="sales_team assets" inherit_id="web.assets_frontend">-->
+<!--        <xpath expr="." position="inside">-->
+<!--            <link rel="stylesheet" type="text/css"-->
+<!--                  href="/css_js/static/src/less/salon_dashboard.less"/>-->
+<!--            <link rel="stylesheet" type="text/css"-->
+<!--                  href="/css_js/static/src/css/salon_dashboard.css"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+<!--    <template id="assets_frontend" name="salon website assets" inherit_id="web.assets_frontend">-->
+<!--        <xpath expr="." position="inside">-->
+<!--            <link rel="stylesheet"-->
+<!--                  href="/css_js/static/src/css/salon_dashboard.css"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
 <!--  Declaramos los menu --> 
 <menuitem id="ej_css_js_menu" name="Css_js" web_icon="stock,static/description/icon.png" sequence="10"/> 
 <menuitem id="submenu_ej_css_js_menu" name="Css_js" sequence="10" parent="ej_css_js_menu"/> 

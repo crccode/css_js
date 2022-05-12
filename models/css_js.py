@@ -6,4 +6,9 @@ from datetime import datetime
 class css_js(models.Model): 
     _name = 'ej.css_js' 
     Ventas = fields.Char(string='Venta')
- 
+
+    @api.model
+    def your_function(self):
+        # CODE TO GET VALUE
+        print('hola')
+        return 'Hola'
