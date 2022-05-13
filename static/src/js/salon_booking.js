@@ -9,6 +9,7 @@ odoo.define('web.salon_booking', function (require) {
     var session = require('web.session');
 //    var country = require("res.country");
 //    var model = require('libros');
+    
 
     var user = session.uid
     console.log('user >>>> ', user)
