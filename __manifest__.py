@@ -36,7 +36,8 @@ Modulo basado en Ynext
 """,
     'demo': [],
     'test': [],
-    'data': ['views/js_view.xml','views/css_js_view.xml', 'security/ir.model.access.csv'],
+    'data': ['views/js_view.xml', 'views/product.xml',
+             'views/css_js_view.xml', 'security/ir.model.access.csv'],
     'installable': True,
     'auto_install': False,
 }

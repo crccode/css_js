@@ -2,7 +2,7 @@
 
 from odoo import http
 from odoo.http import request
-
+import json
 import logging
 _logger = logging.getLogger(__name__)
 
@@ -13,8 +13,8 @@ class OdooContr4ollers(http.Controller):
 	# sudo() SOLO LA LINEA DE CODIGO TENDRA ACCESO DE SUPER USUARIO
 	@http.route(['/get_products'], type='json', auth='public',  website=True)
 	def get_products(self, **post):
-		name = post.get('name', False)
-		name1 = post.get('name1', False)
+		name, name1 = post.get('name', False), post.get('name1', False)
+
 
 		print(name+ '---------'+ name1)
 		print('python')
@@ -43,3 +43,28 @@ class OdooContr4ollers(http.Controller):
 		})
 		print(home_address)
 		print('FIN')
+
+	@http.route('/update_employee', type='json', auth='public', method=['POST'], cors='*', csrf=False)
+	def update_employee(self, **post):
+		data = json.loads(request.httprequest.data)
+		email= data.get('params').get('name')
+		print(data)
+		print(data.get('params').get('name'))
+		employee = request.env['hr.employee'].sudo().search([('work_email', '=', email)])
+		if employee:
+			return {'message': 'already exists'}
+		else:
+			id = request.env['res.partner'].sudo().create({
+				'name': 'CRC25',
+				'zip': '201301',
+				'phone': '99999999',
+				'email': 'email@email.com',
+			}).id
+			print(id)
+			# request.env['res.partner'].sudo().
+			return {'message': 'Employee {} created'.format(id)}
+
+
+
+
+
