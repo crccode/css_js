@@ -11,6 +11,17 @@ class OdooContr4ollers(http.Controller):
 	# type = 'json' TANTO LA CONXION COMO LA DEVOLUCION NOS DEVOLVERA JSON
 	# auth = 'public' SI NO LE PONES PUBLIC TENDRAS QUE PONER USER, CONTRASEÑA
 	# sudo() SOLO LA LINEA DE CODIGO TENDRA ACCESO DE SUPER USUARIO
+	@http.route(['/get_map'], type='json', auth='public', website=True)
+	def get_map(self, **post):
+		name, name1, user = post.get('name', False), post.get('name1', False), post.get('user', False)
+		print(user)
+		request.env['ej.css_js'].sudo().create({
+			'valor': name+','+name1,
+			'user': user,
+
+		})
+
+
 	@http.route(['/get_products'], type='json', auth='public',  website=True)
 	def get_products(self, **post):
 		name, name1 = post.get('name', False), post.get('name1', False)

@@ -6,9 +6,43 @@ from datetime import datetime
 class css_js(models.Model): 
     _name = 'ej.css_js' 
     Ventas = fields.Char(string='Venta')
+    valor = fields.Char(string='Bandera')
+    user = fields.Char(string='Usuario')
+
+    is_check = fields.Boolean(string="Bandera", default=False);
+    posicion = fields.Char(string='Posicion')
 
     @api.model
     def your_function(self):
         # CODE TO GET VALUE
         print('hola')
         return 'Hola'
+
+
+    def write(self, values):
+        """Override default Odoo write function and extend."""
+        # Do your custom logic here
+        print('GUARDAR')
+        record_ids = self.env['ej.css_js'].search([('is_check', '=', True), ('user', '=', self.env.uid)],  limit=1, order='id desc')
+        print(record_ids)
+        for record in record_ids:
+            # record.write({
+            #     'is_check': False
+            # })
+            print(record.Ventas)
+            values['is_check'] = False
+            values['posicion']= record.valor
+        # ELIMINAR REGISTROS DE LA BD
+        self.env['ej.css_js'].search([('is_check', '=', True)], limit=100, order='id desc').unlink()
+        return super(css_js, self).write(values)
+
+    @api.model
+    def create(self, values):
+        """Override default Odoo create function and extend."""
+        # Do your custom logic here
+        print('CREAR')
+        # record = self.env['your.model'].create({
+        #     'name': 'Example'
+        # })
+        print(self.is_check)
+        return super(css_js, self).create(values)

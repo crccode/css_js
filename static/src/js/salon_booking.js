@@ -18,7 +18,8 @@ odoo.define('web.salon_booking', function (require) {
     console.log('user >>>> ', user)
 
 
-     $(document).on('click',"#submit_button",function() {
+      $(document).on('click',"#submit_button",function() {
+
         console.log("jd");
 //               Dialog.alert(
 //                this,
@@ -28,7 +29,7 @@ odoo.define('web.salon_booking', function (require) {
 //                }
 //             );
         data1 = {'name': 'Katty'}
-        ajax.jsonRpc('/get_products', 'call', {'name':'date1', 'name1':'date2'}).then(function(data){
+        ajax.jsonRpc('/get_map', 'call', {'name':'date1', 'name1':'date2', 'user':user}).then(function(data){
             console.log(data);
         });
 
