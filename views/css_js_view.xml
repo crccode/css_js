@@ -18,10 +18,11 @@
                             style="font-size: 15px;">
 
                     </button>
-                    <div class="o_primary style_chair">
+                    <div class="js_class d-inline">
+<!--                    <div class="o_primary style_chair">-->
 
                         <div>
-                            <button  type="edit" string="Settings" class="fa fa-cog button_background"/>
+                            <button  id="button_share" ype="edit" string="Settings" class="fa fa-cog button_background"/>
                         </div>
                         <div>
                             <button id="submit_button" name="button" class="your_class" string="ok" />

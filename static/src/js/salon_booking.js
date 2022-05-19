@@ -12,15 +12,13 @@ odoo.define('web.salon_booking', function (require) {
     var session = require('web.session');
 //    var country = require("res.country");
 //    var model = require('libros');
-
-
     var user = session.uid
     console.log('user >>>> ', user)
 
 
       $(document).on('click',"#submit_button",function() {
 
-        console.log("jd");
+//        console.log("jd");
 //               Dialog.alert(
 //                this,
 //                'Has copiado la URL',
@@ -29,7 +27,7 @@ odoo.define('web.salon_booking', function (require) {
 //                }
 //             );
         data1 = {'name': 'Katty'}
-        ajax.jsonRpc('/get_map', 'call', {'name':'date1', 'name1':'date2', 'user':user}).then(function(data){
+         ajax.jsonRpc('/get_map', 'call', {'name':'date1', 'name1':'date2', 'user':user}).then(function(data){
             console.log(data);
         });
 

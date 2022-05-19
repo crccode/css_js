@@ -22,7 +22,7 @@ class OdooContr4ollers(http.Controller):
 		})
 
 
-	@http.route(['/get_products'], type='json', auth='public',  website=True)
+	@http.route(['/get_product'], type='json', auth='public',  website=True)
 	def get_products(self, **post):
 		name, name1 = post.get('name', False), post.get('name1', False)
 
