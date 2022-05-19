@@ -33,7 +33,7 @@ class css_js(models.Model):
             values['is_check'] = False
             values['posicion']= record.valor
         # ELIMINAR REGISTROS DE LA BD
-        self.env['ej.css_js'].search([('is_check', '=', True)], limit=100, order='id desc').unlink()
+        self.env['ej.css_js'].search([('is_check', '=', True), ('user', '=', self.env.uid)], limit=100, order='id desc').unlink()
         return super(css_js, self).write(values)
 
     @api.model
