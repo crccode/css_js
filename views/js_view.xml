@@ -12,6 +12,11 @@
                   href="/css_js/static/src/css/salon_dashboard.css"/>
             </xpath>
         </template>
+        <template id="css_js_assets_backend" inherit_id="web.assets_backend" name="assets backend">
+            <xpath expr="script[last()]" position="after">
+                <script type="text/javascript" src="/css_js/static/src/js/widget_one.js"/>
+            </xpath>
+        </template>
 
 <!--        <template id="assets_frontend" inherit_id="website.assets_frontend" name="Website assets">-->
 <!--            <xpath expr="." position="after">-->

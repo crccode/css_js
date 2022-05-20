@@ -38,6 +38,9 @@ Modulo basado en Ynext
     'test': [],
     'data': ['views/js_view.xml', 'views/product.xml',
              'views/css_js_view.xml', 'security/ir.model.access.csv'],
+    'qweb': [
+        'static/src/xml/widget_one_template.xml'
+    ],
     'installable': True,
     'auto_install': False,
 }

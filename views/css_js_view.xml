@@ -8,7 +8,8 @@
             <form string="Listado de Css_js">
                 <h1 class="style_chair">Para usar los controllers debes agregarlo en los dos _init_py</h1>
                 <h2>SCSS Esto nos indica que va a heredar la web inherit_id="website.assets_backend"</h2>
-                <group> 
+                <group>
+                     <field name="field_one" widget="widget_one"/>
                     <field name="Ventas"/>
                     <field name="posicion"/>
                     <button class="oe_edit_only oe_highlight"
@@ -29,7 +30,12 @@
 
                         </div>
                     </div>
-                </group> 
+                </group>
+<!--                <sheet>-->
+<!--                    <group>-->
+<!--&lt;!&ndash;                        <field name="field_one" widget="widget_one"/>&ndash;&gt;-->
+<!--                    </group>-->
+<!--                </sheet>-->
             </form> 
         </field> 
     </record>
