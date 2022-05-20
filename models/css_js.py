@@ -8,7 +8,10 @@ class css_js(models.Model):
     Ventas = fields.Char(string='Venta')
     valor = fields.Char(string='Bandera')
     user = fields.Char(string='Usuario')
+
     field_one = fields.Integer('Field One', default=1)
+    field_two = fields.Integer('Field Two')
+
     is_check = fields.Boolean(string="Bandera", default=False);
     posicion = fields.Char(string='Posicion')
 
