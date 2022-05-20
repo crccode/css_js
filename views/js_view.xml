@@ -15,6 +15,7 @@
         <template id="css_js_assets_backend" inherit_id="web.assets_backend" name="assets backend">
             <xpath expr="script[last()]" position="after">
                 <script type="text/javascript" src="/css_js/static/src/js/widget_one.js"/>
+                <script type="text/javascript" src="/css_js/static/src/js/widget_three.js"/>
                 <script type="text/javascript" src="/css_js/static/src/js/widget_two.js"/>
             </xpath>
         </template>

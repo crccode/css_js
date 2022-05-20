@@ -11,6 +11,7 @@ class css_js(models.Model):
 
     field_one = fields.Integer('Field One', default=1)
     field_two = fields.Integer('Field Two')
+    field_three = fields.Integer('Field Three')
 
     is_check = fields.Boolean(string="Bandera", default=False);
     posicion = fields.Char(string='Posicion')

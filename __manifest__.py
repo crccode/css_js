@@ -40,7 +40,9 @@ Modulo basado en Ynext
              'views/css_js_view.xml', 'security/ir.model.access.csv'],
     'qweb': [
         'static/src/xml/widget_one_template.xml',
-        'static/src/xml/widget_two_template.xml'
+        'static/src/xml/widget_two_template.xml',
+        'static/src/xml/widget_three_template.xml'
+
     ],
     'installable': True,
     'auto_install': False,
