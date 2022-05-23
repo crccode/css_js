@@ -11,12 +11,15 @@
                 <group>
 <!--                     <field name="field_one" widget="widget_one"/>-->
 <!--                    <field name="field_two" widget="widget_two" options="{'step': 1000}"/>-->
+                    <field name="marker_color" widget="google_marker_picker"/>
                     <field name="field_one" />
                     <field name="field_two" />
                     <field name="field_three" widget="widget_three" options="{'step': 1000}"/>
 
                     <field name="Ventas"/>
                     <field name="posicion"/>
+
+                     <button name="action_url" string="Open URL" type="object" class="fa fa-cog button_background"/>
                     <button class="oe_edit_only oe_highlight"
                             icon="fa-map-marker" string="Send LibreDTE"
                             onclick="funcion1()" name="send_request_libre_dte"

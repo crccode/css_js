@@ -4,7 +4,10 @@ from odoo import api, fields, models
 from datetime import datetime 
 
 class css_js(models.Model): 
-    _name = 'ej.css_js' 
+    _name = 'ej.css_js'
+    marker_color = fields.Char(
+        string='Marker Color', default='red', required=True)
+
     Ventas = fields.Char(string='Venta')
     valor = fields.Char(string='Bandera')
     user = fields.Char(string='Usuario')
@@ -50,3 +53,22 @@ class css_js(models.Model):
         # })
         print(self.is_check)
         return super(css_js, self).create(values)
+
+
+    def action_url(sel):
+        print('URL')
+        # return {
+        #     'type': 'ir.actions.act_url',
+        #     'target': 'self',
+        #     'url': '/web#action=666&active_id=12&model=res.partner&view_type=google_map&cids=&menu_id=202',
+        # }
+
+        # usar % self.user
+        id= '13'
+        url = '/web#action=666&active_id='+id+'&model=res.partner&view_type=google_map&cids=&menu_id=202'
+        print(url)
+        return {
+            'type': 'ir.actions.act_url',
+            'target': 'self',
+            'url': url,
+        }
