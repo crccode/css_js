@@ -9,12 +9,12 @@
                 <h1 class="style_chair">Para usar los controllers debes agregarlo en los dos _init_py</h1>
                 <h2>SCSS Esto nos indica que va a heredar la web inherit_id="website.assets_backend"</h2>
                 <group>
-<!--                     <field name="field_one" widget="widget_one"/>-->
-<!--                    <field name="field_two" widget="widget_two" options="{'step': 1000}"/>-->
-                    <field name="marker_color" widget="google_marker_picker"/>
-                    <field name="field_one" />
-                    <field name="field_two" />
-                    <field name="field_three" widget="widget_three" options="{'step': 1000}"/>
+                     <field name="field_one" widget="widget_one"/>
+                    <field name="field_two" widget="widget_two" options="{'step': 1000}"/>
+<!--                    <field name="marker_color" widget="google_marker_picker"/>-->
+<!--                    <field name="field_one" />-->
+<!--                    <field name="field_two" />-->
+<!--                    <field name="field_three" widget="widget_three" options="{'step': 1000}"/>-->
 
                     <field name="Ventas"/>
                     <field name="posicion"/>
